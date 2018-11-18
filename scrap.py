@@ -25,7 +25,7 @@ def getKonten(link):
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36'}
     html = requests.get(link, headers=headers)
     soup = BeautifulSoup(html.content, "lxml")
-    nama = soup.findAll("h1")[0].string.strip()
+    nama = soup.findAll("h1")[1].string.strip()
     print(nama)
     harga = soup.findAll("span", {"itemprop": "price"})[0].string
     print(harga)
