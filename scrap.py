@@ -19,6 +19,8 @@ while True:
 
 f = open(namafile, "w")
 writer = csv.writer(f)
+header = "Nama ; Harga ; Info \n"
+
 old =''
 def getKonten(link):
     data = []
