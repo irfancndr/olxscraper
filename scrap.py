@@ -20,6 +20,7 @@ while True:
 f = open(namafile, "w")
 writer = csv.writer(f)
 header = "Nama ; Harga ; Info \n"
+f.write(header)
 
 old =''
 def getKonten(link):
